@@ -4,7 +4,7 @@ Donate link: http://sulaeman.nundut.com/
 Tags: menu, manager, plugin
 Requires at least: 2.8.x
 Tested up to: 2.8.6
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 
 == Description ==
 
@@ -32,6 +32,9 @@ Download the zip file, unzip it, and copy the "menu-manager" folder to your plug
 Visit the <a href="http://sulaeman.nundut.com/plugin/menu-manager-wordpress-plugin/" target="_blank">plugin post</a> for detail installation.
 
 == Changelog ==
+
+= 1.0.1 =
+* fix deactive
 
 = 1.0.0 =
 * first release

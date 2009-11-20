@@ -507,7 +507,7 @@ class Menu_Manager
 	{
 		require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
 		
-		$sql = "DROP TABLE `". Menu_Manager::table_menu_name . "`;";
+		$sql = "DROP TABLE `". MM_TABLE_NAME . "`;";
 		
 		dbDelta($sql);
 	}
