@@ -3,7 +3,7 @@
  * This file is part of Menu Manager. Please see the menu-manager.php file for copyright
  *
  * @author Sulaeman
- * @version 1.0.0
+ * @version 1.0.1
  * @package menu-manager
  */
 

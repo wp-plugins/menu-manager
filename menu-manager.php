@@ -3,7 +3,7 @@
 Plugin Name: Menu Manager
 Plugin URI: http://sulaeman.nundut.com/plugin/menu-manager-wordpress-plugin
 Description: Menu managers enables you to manage blog menu very easy. You can add Pages, Categories, and Custom Link into your blog menu.
-Version: 1.0.0
+Version: 1.0.1
 Author: Sulaeman
 Author URI: http://sulaeman.nundut.com/
 */
