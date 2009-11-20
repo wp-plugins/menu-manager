@@ -29,13 +29,7 @@ Features :
 
 Download the zip file, unzip it, and copy the "menu-manager" folder to your plugins directory. Then activate it from your plugin panel. After successful activation, Menu Manager will appear under your "Settings" tab.
 
-Before you can use Menu Manager, you need to fill out its Settings form.
-After you manage the menu, then you can put below code into your blog :
-
-* create an ul tag, then put an id="mm_nav" at it.
-* then put below code inside the ul tag
-
-<?php if (function_exists('mm_menu')) { mm_menu(); } ?>
+Visit the <a href="http://sulaeman.nundut.com/plugin/menu-manager-wordpress-plugin/" target="_blank">plugin post</a> for detail installation.
 
 == Changelog ==
 
