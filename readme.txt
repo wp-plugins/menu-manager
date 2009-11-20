@@ -32,9 +32,10 @@ Download the zip file, unzip it, and copy the "menu-manager" folder to your plug
 Before you can use Menu Manager, you need to fill out its Settings form.
 After you manage the menu, then you can put below code into your blog :
 
-<ul id="mm_nav">
+* create an ul tag, then put an id="mm_nav" at it.
+* then put below code inside the ul tag
+
 <?php if (function_exists('mm_menu')) { mm_menu(); } ?>
-</ul>
 
 == Changelog ==
 
