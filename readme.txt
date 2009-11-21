@@ -17,7 +17,7 @@ Features :
 * Create new custom menu
 * Manage menu structure
 * Dropdown tree menu
-* If you want to customize the menu-manager.css stylesheet, you can place it in your active theme folder, and Menu Manager will find it there (that way you won't lose your stylesheet customizations when upgrading Menu Manager).
+* If you want to customize the styles/menu-manager.css stylesheet, you can place it in your active theme folder, and Menu Manager will find it there (that way you won't lose your stylesheet customizations when upgrading Menu Manager).
 
 == Screenshots ==
 
