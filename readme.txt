@@ -19,6 +19,9 @@ Features :
 * Dropdown tree menu
 * If you want to customize the styles/menu-manager.css stylesheet, you can place it in your active theme folder, and Menu Manager will find it there (that way you won't lose your stylesheet customizations when upgrading Menu Manager).
 
+Please check my another plugin :
+<a href="http://wordpress.org/extend/plugins/user-link-feed">User Link Feed</a>
+
 == Screenshots ==
 
 1. This screen shot is the Menu Manager Options Panel
