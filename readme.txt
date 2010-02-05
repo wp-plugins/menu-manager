@@ -1,10 +1,10 @@
 === Menu Manager ===
 Contributors: Sulaeman
-Donate link: http://sulaeman.nundut.com/
+Donate link: http://www.feelinc.me/
 Tags: menu, manager, plugin
 Requires at least: 2.8.x
-Tested up to: 2.8.6
-Stable tag: 1.0.1
+Tested up to: 2.9.1
+Stable tag: 1.0.2
 
 == Description ==
 

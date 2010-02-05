@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Menu Manager
-Plugin URI: http://sulaeman.nundut.com/plugin/menu-manager-wordpress-plugin
+Plugin URI: http://www.feelinc.me/plugin/menu-manager-wordpress-plugin
 Description: Menu managers enables you to manage blog menu very easy. You can add Pages, Categories, and Custom Link into your blog menu.
-Version: 1.0.1
+Version: 1.0.2
 Author: Sulaeman
-Author URI: http://sulaeman.nundut.com/
+Author URI: http://www.feelinc.me/
 */
 
 global $wpdb;
