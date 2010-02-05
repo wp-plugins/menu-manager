@@ -1,0 +1,8 @@
+#mm_nav{z-index:2;}
+#mm_nav ul {padding: 2px; display: none; width: 125px; background-color: #32332b; position: fixed; z-index:1000;}
+#mm_nav ul li {margin: 1px 0 0 0; border-right: 0px; padding: 2px 4px;}
+#mm_nav li ul li {padding: 2px 4px; display: block; color: #333; border-right: 0px;}
+#mm_nav li ul li a {background-color: #ffffff; color: #000000; width: 100px; }
+#mm_nav li ul li a:hover {background-color: #dee1d8; color: #000000; text-decoration: none;}
+#mm_nav ul ul {top: auto; z-index:2;}
+#mm_nav li ul ul {margin: -3px 0 0 7px; position: fixed; z-index:2;}
