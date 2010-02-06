@@ -1,4 +1,4 @@
-Copyright 2009  Sulaeman  (email : sulaeman@nundut.com)
+Copyright 2009 - 2010  Sulaeman  (email : mailbox@feelinc.me, sulaeman@feelinc.me)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

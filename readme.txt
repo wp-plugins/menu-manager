@@ -4,7 +4,7 @@ Donate link: http://www.feelinc.me/
 Tags: menu, manager, plugin
 Requires at least: 2.8.x
 Tested up to: 2.9.1
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 
 == Description ==
 
@@ -32,9 +32,18 @@ Please check my another plugin :
 
 Download the zip file, unzip it, and copy the "menu-manager" folder to your plugins directory. Then activate it from your plugin panel. After successful activation, Menu Manager will appear under your "Settings" tab.
 
-Visit the <a href="http://sulaeman.nundut.com/plugin/menu-manager-wordpress-plugin/" target="_blank">plugin post</a> for detail installation.
+Visit the <a href="http://www.feelinc.me/plugin/menu-manager-wordpress-plugin/" target="_blank">plugin post</a> for detail installation.
 
 == Changelog ==
+
+= 1.0.3 =
+* change the dropdown using superfish, please read again the documentation for placing the menu manager plugin html tag
+* show the parent page title on the admin panel
+* re-positioning the admin panel layout
+* fix the some bugs "oh i forgot which bugs"
+
+= 1.0.2 =
+* change plugin url
 
 = 1.0.1 =
 * fix deactive

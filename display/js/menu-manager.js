@@ -20,6 +20,8 @@ function set_dragable(obj) {
 }
 
 jQuery(function() {
+	jQuery("#mm_nav").superfish();
+	
 	jQuery('#sys_but_add_cust_link').click(function(){
 		jQuery('.sys_cust_link_item_example').clone().removeClass('sys_cust_link_item_example').appendTo(jQuery('#sys_cust_link_container')).css('display', 'block');
 	});
@@ -89,23 +91,5 @@ jQuery(function() {
 		delete item;
 		
 		return false;
-	});
-	
-	jQuery("#mm_nav ul").css({display:"none"});
-	jQuery("#mm_nav li").not('.mm_sub_nav').hover(function(){
-		var current_obj = jQuery(this);
-		var pos = current_obj.offset();
-		current_obj.find('ul:first').css({visibility:"visible",display:"none", top: (pos.top + current_obj.height()), left: pos.left}).show(100)
-		delete pos;
-	},function(){
-		jQuery(this).find('ul:first').css({visibility:"hidden"});
-	});
-	jQuery(".mm_sub_nav li").hover(function(){
-		var current_obj = jQuery(this);
-		var pos = current_obj.offset();
-		current_obj.find('ul:first').css({visibility:"visible",display:"none", top: pos.top, left: (pos.left + current_obj.width())}).show(100)
-		delete pos;
-	},function(){
-		jQuery(this).find('ul:first').css({visibility:"hidden"});
 	});
 });

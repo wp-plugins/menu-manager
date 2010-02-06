@@ -33,7 +33,7 @@ class Menu_Manager
 	{
 		global $wpdb;
 		
-		if (isset($_POST['mm_save_options']) && $_POST['mm_save_options'] != '')
+		if (isset($_POST['mm_save_options_page']) && $_POST['mm_save_options_page'] != '')
 		{
 			$selected_menu = '';
 			if (is_array($_POST['page_main_menu']))
@@ -47,6 +47,11 @@ class Menu_Manager
 			}
 			Menu_Manager::delete_menus('', 'page', $selected_menu);
 			
+			$message = 'Menu Manager settings saved.';
+		}
+		
+		if (isset($_POST['mm_save_options_category']) && $_POST['mm_save_options_category'] != '')
+		{
 			$selected_menu = '';
 			if (is_array($_POST['cat_main_menu']))
 			{
@@ -58,7 +63,10 @@ class Menu_Manager
 				$selected_menu = substr($selected_menu, 0, (strlen($selected_menu) - 1));
 			}
 			Menu_Manager::delete_menus('', 'category', $selected_menu);
-			
+		}
+		
+		if (isset($_POST['mm_save_options_custom']) && $_POST['mm_save_options_custom'] != '')
+		{
 			if (is_array($_POST['cust_main_menu']['unid']))
 			{
 				$i_menu = 0;
@@ -84,8 +92,6 @@ class Menu_Manager
 					++$i_menu;
 				}
 			}
-			
-			$message = 'Menu Manager settings saved.';
 		}
 		
 		if (isset($_POST['mm_structure_save_options']) && $_POST['mm_structure_save_options'] != '')
@@ -211,13 +217,13 @@ class Menu_Manager
 					$menu->menu_name = $category->cat_name;
 				}
 				?>
-				<li <?= ($parent == 0) ? 'id="mm_parent_' . $unid . '" ' : ''; ?>class="page_item">	
-				<a href="<?= $menu->menu_value; ?>" class="<?= $menu->menu_class; ?>">
-				<?= $menu->menu_name; ?>
+				<li class="page_item">	
+				<a href="<?php echo $menu->menu_value; ?>" class="<?php echo $menu->menu_class; ?>">
+				<?php echo $menu->menu_name; ?>
 				</a>
 				<?php if (Menu_Manager::has_submenu($menu_structure, $menu->menu_id)) : ?>
-				<ul class="mm_sub_nav" style="visibility: hidden; display: block;">
-				<?= Menu_Manager::create_menu_item($menu_structure, $menu->menu_id); ?>
+				<ul class="mm_sub_nav">
+				<?php echo Menu_Manager::create_menu_item($menu_structure, $menu->menu_id); ?>
 				</ul>
 				<?php endif; ?>
 				</li><?php
@@ -231,19 +237,23 @@ class Menu_Manager
 		
 		$exist = TRUE;
 		
+		$unid = (intval($unid) > 0) ? $unid : 0;
+		
 		if ($unid == 0)
 		{
 			$exist = FALSE;
 			
 			if ($check_value)
 			{
-				$sql = 'SELECT menu_id, menu_parent FROM ' . MM_TABLE_NAME . ' ';
+				$sql = 'SELECT menu_id, menu_parent, menu_order FROM ' . MM_TABLE_NAME . ' ';
 				$sql .= 'WHERE ';
 				$sql .= 'menu_value = "' . $value . '" AND menu_type = "' . $type . '" LIMIT 1';
-				$menu = $wpdb->get_row($sql, ARRAY_A);
-				if ($menu)
+				$current_menu = $wpdb->get_row($sql, ARRAY_A);
+				if (is_array($current_menu) && count($current_menu) > 0)
 				{
-					$unid = $menu['menu_unid'];
+					$unid = $current_menu['menu_id'];
+					$parent = $current_menu['menu_parent'];
+					$order = $current_menu['menu_order'];
 					$exist = TRUE;
 				}
 			}
@@ -251,10 +261,10 @@ class Menu_Manager
 			if (!$exist)
 			{
 				$sql = 'INSERT INTO ' . MM_TABLE_NAME . ' ';
-				$sql .= '(menu_parent, menu_name, menu_value, menu_class, menu_type, menu_order)';
+				$sql .= '(menu_parent, menu_name, menu_value, menu_type, menu_order)';
 				$sql .= 'VALUES ';
 				
-				$sql .= '(' . $parent . ', "' . mysql_real_escape_string($name) . '", "' . mysql_real_escape_string($value) . '", "' . mysql_real_escape_string($class) . '", "' . $type . '", ' . $order . ')';
+				$sql .= '(' . $parent . ', "' . mysql_real_escape_string($name) . '", "' . mysql_real_escape_string($value) . '", "' . $type . '", ' . $order . ')';
 			}
 		}
 		
@@ -300,6 +310,8 @@ class Menu_Manager
 	function delete_menus($unid, $type = '', $selected_menu = '')
 	{
 		global $wpdb;
+		
+		$unid = (intval($unid) > 0) ? $unid : 0;
 		
 		$sql = 'DELETE FROM ' . MM_TABLE_NAME . ' ';
 		$sql .= 'WHERE ';
@@ -446,9 +458,11 @@ class Menu_Manager
 		else
 		{
 			wp_enqueue_style('menu-manager_css', MM_DISPLAY_URL . '/styles/menu-manager.css', false, MM_VERSION);
+			wp_enqueue_style('superfish_css', MM_DISPLAY_URL . '/styles/superfish.css', false, MM_VERSION);
 		}
 		wp_enqueue_script('jquery');
 		wp_enqueue_script('menu-manager_js', MM_DISPLAY_URL . '/js/menu-manager.js', false, MM_VERSION);
+		wp_enqueue_script('superfish_js', MM_DISPLAY_URL . '/js/superfish.js', false, MM_VERSION);
     }
 	
 	/**
