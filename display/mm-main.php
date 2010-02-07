@@ -103,6 +103,7 @@ function get_parent_page_name($pages, $parent)
 .mm_highlight h5 { background:#ffffff; color:#000000; }
 </style>
 <script type="text/javascript" src="<?php echo MM_DISPLAY_URL; ?>/js/jquery-ui.js"></script>
+<script type="text/javascript" src="<?php echo MM_DISPLAY_URL; ?>/js/superfish.js"></script>
 <script type="text/javascript" src="<?php echo MM_DISPLAY_URL; ?>/js/menu-manager.js"></script>
 
 <div class="wrap">
