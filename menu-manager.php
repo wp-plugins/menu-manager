@@ -10,7 +10,7 @@ Author URI: http://www.feelinc.me/
 
 global $wpdb;
 
-define('MM_VERSION', '1.0.3');
+define('MM_VERSION', '1.0.4');
 define('MM_PLUGIN_NAME', 'Menu_Manager');
 define('MM_FILE', basename(__FILE__));
 define('MM_DIR', dirname(__FILE__));
