@@ -451,6 +451,7 @@ class Menu_Manager
      */
     function get_head_tags()
 	{
+		wp_enqueue_style('superfish_css', MM_DISPLAY_URL . '/styles/superfish.css', false, MM_VERSION);
 		if (file_exists(TEMPLATEPATH . '/styles/menu-manager.css'))
 		{
 			wp_enqueue_style('menu-manager_css', get_bloginfo('template_directory') . '/styles/menu-manager.css', false, MM_VERSION);
@@ -459,7 +460,6 @@ class Menu_Manager
 		{
 			wp_enqueue_style('menu-manager_css', MM_DISPLAY_URL . '/styles/menu-manager.css', false, MM_VERSION);
 		}
-		wp_enqueue_style('superfish_css', MM_DISPLAY_URL . '/styles/superfish.css', false, MM_VERSION);
 		wp_enqueue_script('jquery');
 		wp_enqueue_script('superfish_js', MM_DISPLAY_URL . '/js/superfish.js', false, MM_VERSION);
 		wp_enqueue_script('menu-manager_js', MM_DISPLAY_URL . '/js/menu-manager.js', false, MM_VERSION);
