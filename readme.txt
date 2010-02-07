@@ -4,7 +4,7 @@ Donate link: http://www.feelinc.me/
 Tags: menu, manager, plugin
 Requires at least: 2.8.x
 Tested up to: 2.9.1
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 
 == Description ==
 
@@ -35,6 +35,9 @@ Download the zip file, unzip it, and copy the "menu-manager" folder to your plug
 Visit the <a href="http://www.feelinc.me/plugin/menu-manager-wordpress-plugin/" target="_blank">plugin post</a> for detail installation.
 
 == Changelog ==
+
+= 1.0.4 =
+* fix in some usage the superfish did not loaded
 
 = 1.0.3 =
 * change the dropdown using superfish, please read again the documentation for placing the menu manager plugin html tag

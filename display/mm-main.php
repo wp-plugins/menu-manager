@@ -3,7 +3,7 @@
  * This file is part of Menu Manager. Please see the menu-manager.php file for copyright
  *
  * @author Sulaeman
- * @version 1.0.0
+ * @version 1.0.4
  * @package menu-manager
  */
 
@@ -86,6 +86,7 @@ function get_parent_page_name($pages, $parent)
 ?>
 
 <link type="text/css" media="screen" rel="stylesheet" href="<?php echo MM_DISPLAY_URL; ?>/styles/jquery/jquery-ui.css" />
+<link type="text/css" media="screen" rel="stylesheet" href="<?php echo MM_DISPLAY_URL; ?>/styles/superfish.css" />
 <style>
 #mm_gallery { float: left; width: 100%; min-height: 12em; } * html #mm_gallery { height: 12em; } /* IE6 */
 .mm_gallery.custom-state-active { background: #eee; }
@@ -103,6 +104,7 @@ function get_parent_page_name($pages, $parent)
 .mm_highlight h5 { background:#ffffff; color:#000000; }
 </style>
 <script type="text/javascript" src="<?php echo MM_DISPLAY_URL; ?>/js/jquery-ui.js"></script>
+<script type="text/javascript" src="<?php echo MM_DISPLAY_URL; ?>/js/superfish.js"></script>
 <script type="text/javascript" src="<?php echo MM_DISPLAY_URL; ?>/js/menu-manager.js"></script>
 
 <div class="wrap">
